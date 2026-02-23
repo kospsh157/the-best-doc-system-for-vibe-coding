@@ -32,17 +32,7 @@
 3) 세션 중 읽은 모든 문서를 기록한다(L0 포함).  
 4) 작업 중 변경이 생기면 해당 문서를 즉시 갱신한다.  
 5) 세션 종료 시 `docs/session/END_PROMPT.md`를 읽고 절차를 수행한다.  
-6) 세션 시작 시 `python3 scripts/doc_tokens.py`로 문서 토큰 합계를 계산해 사용자에게 보고한다(정확/추정 여부 포함).  
-7) 정확 계산에 `tiktoken`이 필요하면 아래 안내 문구로 승인받은 뒤 `python3 scripts/doc_tokens.py --auto-install --yes`로 재실행한다.  
-
-## 토큰 계산 설치 안내 문구(필수)
-다음 문구를 그대로 사용자에게 알린다.
-```
-정확한 토큰 계산을 위해 Python 패키지 `tiktoken` 설치가 필요합니다.
-이 설치는 `pip`를 통해 PyPI에서 패키지를 다운로드하며 네트워크 접근이 필요합니다.
-설치를 원하지 않으면 현재는 추정치로 진행합니다.
-설치를 승인하시면 `python3 scripts/doc_tokens.py --auto-install --yes`를 실행하겠습니다.
-```
+6) 세션 시작 시 `python3 scripts/doc_tokens.py`로 문서 토큰 합계를 계산해 사용자에게 보고한다(현재 계산 방식은 추정치).  
 
 ## L0 고정 목록(항상 읽기)
 1) `starter.md`  
