@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+
+echo "[pre-commit] Running architecture guard..."
+python3 scripts/check_arch.py
+
+echo "[pre-commit] Running documentation quality guard..."
+python3 scripts/check_docs.py

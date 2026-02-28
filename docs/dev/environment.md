@@ -17,5 +17,13 @@
 ## 필수 환경 변수
 - 없음
 
+## 선택 환경 변수
+- `DOC_TOKEN_BUDGET`: 토큰 가드 예산(기본 40000)
+- `DOC_TOKEN_WARN_RATIO`: 경고 비율(기본 0.75, 경고선 30000)
+
 ## 로컬 실행 방법
 - 문서 토큰 계산: `./scripts/run_doc_tokens.sh` (Unix/macOS) 또는 `scripts\run_doc_tokens.bat` (Windows) 또는 `python3 scripts/run_doc_tokens.py` (모든 플랫폼)  
+- 토큰 가드 확인: `python3 scripts/doc_token_guard.py`
+- 아키텍처 규칙 검사: `python3 scripts/check_arch.py`
+- 문서 품질 검사: `python3 scripts/check_docs.py`
+- 훅 설치(권장, 1회): `./scripts/install_git_hook.sh`
